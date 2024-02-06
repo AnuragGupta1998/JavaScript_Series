@@ -10,4 +10,6 @@ pincode=110085; //we can declare the variable without using keyword but never us
 rollno='ashutosh'
 state=20
 pincode="mumbai"
+
+// another way of printing the vlaues using console.table
 console.table([id,rollno,state,pincode]);
