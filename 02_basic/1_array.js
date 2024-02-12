@@ -65,4 +65,14 @@ const a8=a6.splice(1,4,500,100,"anurag",true) //it remove from 1st index 4 eleme
 console.log(a8);  //[20,30,40,50]
 console.log(a6);  //[ 10, 500, 100, 'anurag', true ]
 
+//at() it return the value based on particular index
+const a9=[1,2,3,4,5];
+console.log(a9.at(4)); //5
+console.log(a9.at(5)); //undefined
+
+//reverse() it reverse the array
+console.log(a9);
+console.log(a9.reverse());
+console.log(a9);
+
 
