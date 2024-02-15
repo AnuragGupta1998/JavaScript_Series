@@ -5,7 +5,7 @@ const course={
     price:2000,
     courseInstructor:"Anurag"
 }
-//de-structure
+//de-structure...............................
 const {courseInstructor,price,coursename}=course
 
 console.log(coursename,price,courseInstructor);
