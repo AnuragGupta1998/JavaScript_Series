@@ -24,7 +24,22 @@ const m1=function(){
 }
 m1();
 
-//Arrow Function
-const d=()=>{console.log("arrow function")};
-d()
+//Arrow Function........................................................
+// const addTwo=(num1,num2)=>{    explicit return
+//     return num1+num2
+// }
+// console.log(addTwo(3,4));
+
+// const addTwo=(num1,num2)=>num1+num2   //implicit return
+// console.log(addTwo(3,4));
+
+// const addTwo=(num1,num2)=>(num1+num2)   //implicit return
+// console.log(addTwo(3,4));
+
+//return object
+const addTwo=(usernamae)=>({name:"Anuraggggggg"})   //implicit return
+console.log('arrow',addTwo(user.username));
+
+
+
 
