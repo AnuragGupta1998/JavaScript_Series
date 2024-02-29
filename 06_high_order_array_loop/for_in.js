@@ -1,4 +1,5 @@
-//forin loop print in the keys form
+//for-in loop print in the keys form
+//it does not apply on Map
 
 //for_in on Object..................................................
 const myObj={

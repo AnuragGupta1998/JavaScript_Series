@@ -21,7 +21,7 @@ for (const g of greeting) {
     
 }
 
-// fot of on Map
+// for of on Map..................
 const map =new Map();
 map.set(1,'one');
 map.set(2,2)
