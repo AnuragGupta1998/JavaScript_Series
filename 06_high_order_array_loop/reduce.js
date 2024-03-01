@@ -1,10 +1,11 @@
+//reduce() is used in to calcuate the sum of array
 const arr=[1,2,3,4,5]
 
 // acc=accumalator currVal=current value
 const total=arr.reduce((acc,currVal)=>{
     console.log(`acc:-${acc} currVal:-${currVal}`);
     return acc+currVal},2) //what we pass after callback function is become accumalator
-console.log(total);
+console.log(total); //15
 
 //arrays of object
 const obj=[
