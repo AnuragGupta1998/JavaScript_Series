@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
+    <style>
+        .bgc{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
 </head>
-<body>
-    <h1 id="one">first Heading</h1>
+<body class="bgc">
+    <h1 id="one">first Heading  <span>this is span inside heading one</span></h1>
     <h1 id="two">second heading</h1>
+    <h2 class="cName"> By class name get elements</h2>
+
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
     
+
     <script>
-        //first element manipulate
+        //getElementById('one')................
        let item=document.getElementById('one');
        item.innerText='innerText'
 
-       //second element manipulate
+    //getElementById('one')
        let item2=document.getElementById('two')
-       item2.innerHTML="<p>innerHTML</p>"
+     // item2.innerHTML="<p>innerHTML</p>";
+
+    //  getElementsByClassName('cName')..............
+
+    //  document.getElementsByClassName('cName').innerHTML="anurag"
+     const cn=document.getElementsByClassName('cName')
+     cn.innerHTML='anurag'
+
+
     </script>
 </body>
 </html>
