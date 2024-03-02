@@ -21,6 +21,36 @@
         <div class="day"> Saturday  </div>
         <div class="day"> Sunday    </div>
     </div>
+
     
+    <script>
+        //travarse from parent to child...........
+        const p=document.querySelector('.parent') 
+        // console.log(p.children);
+        // console.log(p.children[1].innerText); //Tuesday
+
+        for (let index = 0; index < p.children.length; index++) {
+            // console.log(p.children[index].innerHTML);
+            
+        }
+
+        // p.children[2].style.color='green'  //changing the color
+
+        //travarse from child to parent...............................
+        const b=document.querySelector('.day');
+        // console.log(b.innerHTML);
+        
+        //sibling of element
+        // console.log(b.nextElementSibling.innerHTML);
+        
+        //parent element of child
+        // console.log(b.parentElement.innerHTML);
+
+        console.log(p.childNodes[1].innerHTML);
+
+
+
+        
+    </script>
 </body>
 </html>

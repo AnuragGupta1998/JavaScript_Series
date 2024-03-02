@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElementByDOM</title>
+    <style>
+        .bgc{
+           background-color: black;
+           color: aliceblue;
+        }
+    </style>
+</head>
+<body class="bgc">
+    
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div);
+    // div.setAttribute('id','myId')
+    // div.setAttribute('class','myClass')
+    div.id='myID'
+    div.className='myClass'
+
+    div.setAttribute('title','mytitle')
+    div.style.backgroundColor='green'
+    div.appendChild(document.createTextNode("chai aur code"))
+    
+    //attach the element to body..............
+    document.body.appendChild(div)
+
+    //create Element 
+    const h1=document.createElement('h1')
+    h1.innerText='Heading'
+    // h1.style.color='white'
+    document.body.appendChild(h1)
+</script>
+</html>
