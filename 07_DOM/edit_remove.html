@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element in DOM</title>
+    <style>
+        .bgc{
+           background-color: black;
+           color: aliceblue;
+        }
+    </style>
+</head>
+<body class="bgc">
+    <ul class="ulP">
+        <li class="liC">javascript</li>
+    </ul>
+    
+</body>
+<script>
+    const UL=document.querySelector('.ulP')
+
+    const l1=document.createElement('li')
+    l1.innerHTML="java";
+    UL.appendChild(l1)
+   
+   //write function to add element...............................
+   function addLang(langName){
+    const l=document.createElement('li')
+    l.innerHTML=langName
+    UL.appendChild(l)
+    
+   }
+  addLang('python')
+
+   //another optimise function to add element......................
+   function addLangOptimise(langName){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    UL.appendChild(li)
+   }
+   addLangOptimise("optimise_one")
+   addLangOptimise("optimise_two")
+
+   //edit element..................................
+   const el=document.querySelector('li:nth-child(2)') //java
+//    console.log(el);
+   const edit=document.createElement('li')
+   edit.textContent="anurag"
+   el.replaceWith(edit)
+
+   //ways to edit element
+   const t=document.querySelector('li:nth-child(3)')
+//    console.log(t);
+   t.innerHTML='rubi'
+
+   const p=document.querySelector('li:first-child')
+   console.log(p);
+   p.outerHTML='<li> Typescript </li>'
+   console.log(p);
+
+   //remove the element...................................
+   const f=document.querySelector('li:first-child')
+//    console.log(f);
+   f.remove()
+</script>
+</html>
