@@ -1,4 +1,7 @@
+
+//getting all the boxes
 const box=document.querySelectorAll('.button');
+//getting body to target body
 const body=document.body
 
 //querySelectAll gives NodeList
