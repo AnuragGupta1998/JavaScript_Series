@@ -2,7 +2,41 @@
 
 ## project names
 
-### 1:- colorChange
+### 1:- colorChange code
+```javascript
+
+
+//getting all the boxes
+const box=document.querySelectorAll('.button');
+//getting body to target body
+const body=document.body
+
+//querySelectAll gives NodeList
+box.forEach((b)=>{
+    console.log(b);
+    b.addEventListener('click',(e)=>{
+        console.log(e.target.id);
+        switch(e.target.id){
+            case 'green':
+                body.style.backgroundColor=e.target.id
+                break;
+            case'yellow':
+                body.style.backgroundColor=e.target.id
+                break;
+            case'blue':
+                body.style.backgroundColor=e.target.id
+                break;
+            case'red':
+                body.style.backgroundColor=e.target.id
+                break;
+            
+            default:
+                body.style.backgroundColor="cyan"
+            
+        }
+    })
+})
+```
 ### 2:-BMICalculator
 ### 3:-DigitalClock
 ### 4:-GuessTheNumber
