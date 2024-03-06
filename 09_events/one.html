@@ -46,8 +46,9 @@
     
     images.addEventListener('click',function(e){
      
-        console.log(e.target.tagName); 
-        if(e.target.tagName==="IMG"){ 
+        // console.log(e.target.tagName); //IMG
+        if(e.target.tagName === "IMG"){ 
+            // console.log(e.target.id);//every image id display
            const removeIt= e.target.parentNode  //<li..</li>
            removeIt.remove()
         }
