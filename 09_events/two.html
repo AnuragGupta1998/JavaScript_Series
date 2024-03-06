@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+    <style>
+         #div1 { 
+            background-color: lightgreen; 
+            padding: 24px; 
+            border: 1px solid black; 
+        } 
+  
+        #div2 { 
+            background-color: yellow; 
+            padding: 18px; 
+            border: 1px solid black; 
+  
+        } 
+  
+        #div3 { 
+            background-color: orange; 
+            border: 1px solid black; 
+        } 
+    </style>
+</head>
+<body>
+    <div id="div1"> component 1
+        <div id="div2"> component 2
+            <div id="div3"> component 3
+
+            </div>
+        </div>
+    </div>
+
+    <div id="div4"> component 4
+        <div id="div5"> component 5
+            <div id="div6"> component 6
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    //bubbling event   element event -> parent event->grand parent event...
+    const div1=document.querySelector('#div1');
+    const div2=document.querySelector('#div2');
+    const div3=document.querySelector('#div3');
+
+
+    div1.addEventListener('click',function(e){
+        alert('component 1 div 1')
+        
+    });
+    div2.addEventListener('click',function(e){
+        alert('component 2 div 2')
+        // e.stopPropagation()
+    });
+    div3.addEventListener('click',function(e){
+        alert('component 3 div 3')
+        // e.stopPropagation()       //to stop propagation
+   
+    });
+
+
+    //event capturing child to parent -> child
+    const div4=document.querySelector('#div4');
+    const div5=document.querySelector('#div5');
+    const div6=document.querySelector('#div6');
+ 
+    div4.addEventListener('click',function(e){
+        alert('component 4 div 4')
+        // e.stopPropagation()
+    },true);
+    div5.addEventListener('click',function(e){
+        alert('component 5 div 5')
+    },true);
+    div6.addEventListener('click',function(e){
+        alert('component 6 div 6')
+    },true);
+
+//to stop event propagation e.stopPropagation() method used to stop event progation
+
+</script>
+</html>

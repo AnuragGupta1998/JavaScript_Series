@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Evenets</title>
+</head>
+<style>
+    img{
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <h2>Images collection</h2>
+    <ul id="images">
+        ul list
+        <li>
+            <img src="https://images.pexels.com/photos/12964186/pexels-photo-12964186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="" id="Bugatti">
+        </li>
+        <li>
+            <img src="https://images.pexels.com/photos/14019975/pexels-photo-14019975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="" id="Ferrari">
+        </li>
+        <li>
+            <img src="https://images.pexels.com/photos/10198875/pexels-photo-10198875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="" id="McLaren">
+        </li>
+        <li>
+            <img src="https://images.pexels.com/photos/6462662/pexels-photo-6462662.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  
+            alt="" id="Lamboghini">
+        </li>
+    </ul>
+    <p id="add">paragraph</p>
+    <a href="https://www.google.com" id="google">clicke here to go google.com</a>
+
+</body>
+<script>
+
+    //removing image
+    const images=document.querySelector('#images');
+    
+    images.addEventListener('click',function(e){
+     
+        console.log(e.target.tagName); 
+        if(e.target.tagName==="IMG"){ 
+           const removeIt= e.target.parentNode  //<li..</li>
+           removeIt.remove()
+        }
+
+    },)
+
+    const a= document.getElementById('google');
+    a.addEventListener('click',function(e){
+        e.preventDefault();  //stop submission of form
+    })
+
+</script>
+
+</html>
