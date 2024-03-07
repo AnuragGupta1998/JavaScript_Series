@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynch Project</title>
+</head>
+<body> 
+    <h2>Anurag</h2>
+    <button id="stop"> Stop</button>
+    
+</body>
+ <script>
+    const h2=document.querySelector('h2');
+    
+    //setTimeout() method
+    const stopFun=setTimeout(function(){
+        h2.innerHTML="Async Project"
+    },3000);
+
+    //stop the setTimeout()
+     document.querySelector('#stop') .addEventListener('click',function(){
+      
+        clearTimeout(stopFun);
+        console.log("STOPPED THE setTimeout()");
+     })
+
+    //  clearTimeout(stopFun);
+ </script>
+
+</html>
