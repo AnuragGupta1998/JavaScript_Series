@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval Function</title>
+    <style>
+        button{
+            background-color: rgb(95, 165, 42);
+            padding: 2px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Anurag Learner</h1>
+
+    <button id="start"> Start </button>
+
+    <button id="stop"> Stop </button>
+
+</body>
+<script>
+    const h1    = document.querySelector('h1');
+    const start = document.querySelector('#start');
+    const stop  = document.querySelector('#stop')
+    let stopId;
+    const arr=['one','two','three','four']
+    let l=0;
+    start.addEventListener('click',()=>{
+        stopId=setInterval(()=>{
+            // h1.innerHTML=new Date().toLocaleTimeString('en-IT');
+            
+           h1.innerHTML=arr[l];
+           l++;
+         console.log('setInterval');
+        },1000 )
+    });
+
+    stop.addEventListener('click',()=>{
+    
+        clearInterval(stopId);
+        console.log("Interval Stopped");
+
+    });
+
+    
+    
+
+
+</script>
+</html>
