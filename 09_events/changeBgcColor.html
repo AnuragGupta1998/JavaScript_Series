@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Backgroung Color</title>
+    <style>
+        button{
+            background-color: rgb(138, 250, 138);
+            padding: 2px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>change background color </h1>
+
+    <button id="start">Start color changing</button>
+    <button id="stop"> Stop</button>
+    
+</body>
+<script>
+    //generating random color...............................
+    const randomColor=function(){
+        const hexa='0123456789ABCDEF';
+        color='#';
+
+        for(let i=0;i<6;i++){
+            color += hexa[Math.floor(Math.random()*16)];
+        }
+        // console.log(color);
+        return color;  
+    }
+   
+    let ID;
+    const btn=document.querySelectorAll('button')
+    //changing color........................................
+
+    //function to change background color..
+    const startChangingColor=function(){
+        if(!ID){
+           ID= setInterval(()=>{
+               document.body.style.backgroundColor=randomColor()
+            //    stop.style.backgroundColor=randomColor()
+            //    start.style.backgroundColor=randomColor()
+
+            //changing button background color also..
+            for(let i of btn){
+            i.style.backgroundColor=randomColor()
+            }
+            
+            },1000)
+        }
+    }
+
+    const start=document.querySelector('#start'); //getting start button reference
+    start.addEventListener('click',startChangingColor) //adding event on button
+
+    //stop changing color................
+    const stopChangingColor=function(){
+        clearInterval(ID)
+        ID=null; //reset the value to null
+    }
+
+    const stop=document.querySelector('#stop');
+    stop.addEventListener('click',stopChangingColor)
+</script>
+</html>
