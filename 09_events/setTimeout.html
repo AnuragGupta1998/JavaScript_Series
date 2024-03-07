@@ -13,12 +13,12 @@
  <script>
     const h2=document.querySelector('h2');
     
-    //setTimeout() method getting id from setTimeout function to stope exxecution of function
+    //setTimeout() method getting id from setTimeout function
     const stopFun=setTimeout(function(){
         h2.innerHTML="Async Project"
     },3000);
 
-    //stop the setTimeout()
+    //stop the setTimeout() from executing 
      document.querySelector('#stop') .addEventListener('click',function(){
       
         clearTimeout(stopFun);
