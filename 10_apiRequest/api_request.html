@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request in HTML</title>
+</head>
+<body>
+    <h2>API request in html</h2>
+    <div class="one"></div>
+
+    
+</body>
+<script>
+   const requestURL= 'https://api.github.com/users/AnuragGupta1998';
+
+   const xhr=new XMLHttpRequest();
+   xhr.open('GET',requestURL);
+
+   xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+
+    if(xhr.readyState === 4){    //if state id 4 then exctract data 
+        const data=JSON.parse(this.responseText) //convert string data into object using JSON.parse()
+        console.log(data);
+        document.body.appendChild('<h2>Anuraggggg</h2>')
+    }
+   }
+   xhr.send() //send request to XMLHttpRequest()
+
+   const image=document.createElement('img');
+   image.src="https://avatars.githubusercontent.com/u/96585786?v=4"
+   document.body.appendChild(image)
+
+</script>
+
+
+</html>
