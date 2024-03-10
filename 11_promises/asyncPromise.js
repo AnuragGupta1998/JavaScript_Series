@@ -1,4 +1,4 @@
-//creating Promise()
+//creating Promise()....................................
 const promiseCreated=new Promise((resolve,reject)=>{
 
     setTimeout(()=>{
